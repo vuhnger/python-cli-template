@@ -1,0 +1,4 @@
+name        = "mitt-nye-repo"
+description = "Én setning om hva dette gjør"
+visibility  = "public"
+topics      = ["python", "cli"]
