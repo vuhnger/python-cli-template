@@ -3,7 +3,7 @@ provider "github" {
 }
 
 module "repository" {
-  source = "./modules/github-repo"
+  source = "git::https://github.com/vuhnger/terraform-github-repo.git?ref=v1.0.0"
 
   name        = var.name
   description = var.description

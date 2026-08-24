@@ -25,7 +25,7 @@ uv run ruff format src tests              formater
 uv run mypy                               typesjekk
 uv run ty check src/appname               rask typesjekk
 terraform -chdir=terraform plan           se hva som endres i repo-oppsettet
-git tag v0.1.0 && git push --tags         bygg og publiser til PyPI
+terraform -chdir=terraform apply          ta i bruk repo-reglene
 ```
 
 ## Release

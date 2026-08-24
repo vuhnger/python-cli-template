@@ -29,7 +29,7 @@ variable "topics" {
 variable "required_status_checks" {
   description = "Check names that must pass before a pull request can merge"
   type        = list(string)
-  default     = ["test"]
+  default     = ["test", "Conventional Commit title"]
 }
 
 variable "required_approvals" {
