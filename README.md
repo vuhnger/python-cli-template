@@ -30,5 +30,10 @@ terraform -chdir=terraform apply          ta i bruk repo-reglene
 
 ## Release
 
-`release.yml` bygger og publiserer på tag `v*`. Registrer repoet som trusted publisher
-på pypi.org først, ellers finnes det ingen nøkkel og publiseringen feiler.
+Release-please samler Conventional Commits fra main i en release-PR. Merger du den,
+settes taggen og GitHub-releasen, og `publish.yml` bygger og laster opp til PyPI.
+Registrer repoet som trusted publisher på pypi.org først, ellers finnes det ingen
+nøkkel og publiseringen feiler.
+
+Repo-reglene kommer fra `vuhnger/terraform-github-repo`, så en regelendring gjøres ett
+sted og hentes inn ved å bumpe `ref` i `terraform/main.tf`.
