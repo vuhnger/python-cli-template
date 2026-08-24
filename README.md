@@ -12,6 +12,8 @@ PyPI med trusted publishing, og GitHub-reglene i Terraform.
 4. `cp terraform/terraform.tfvars.example terraform/terraform.tfvars` og fyll inn navn.
 5. `export GITHUB_TOKEN=$(gh auth token --hostname github.com)`
 6. `terraform -chdir=terraform init && terraform -chdir=terraform apply`
+7. Tillat at Actions kan opprette PR-er, ellers feiler release-please:
+   `gh api -X PUT repos/vuhnger/mitt-repo/actions/permissions/workflow -F can_approve_pull_request_reviews=true -F default_workflow_permissions=write`
 
 Etter punkt 6 er main beskyttet: squash-only, ingen push rett til main, grønn CI før
 merge, og ingen force push eller sletting.
